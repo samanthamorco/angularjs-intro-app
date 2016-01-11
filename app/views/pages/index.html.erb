@@ -1,0 +1,44 @@
+<div ng-app="app">
+  <div ng-controller="exampleCtrl">
+
+    <div>
+      <div ng-repeat="todo in todoList track by $index" > 
+      <p ng-click="hideTodo($index)" ng-if="ifPositive(todo)">{{todo.text}} </p>
+      <p><input ng-model="todo.text"></p>
+      </div>
+
+    </div>
+    <!-- <p><input ng-model="todoList[2]"></p> -->
+
+    <div>Add To Do Item:
+      <div>
+        <input ng-model="todoText">
+      </div>
+      <div>
+        <input ng-model="todoRating">
+      </div>
+    <button ng-click="addTodo(todoText, todoRating)">Submit</button>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+<!--     <p>{{message}}</p>
+    <input ng-model="message">
+    <p>{{message2}}</p>
+    <input ng-model="message2">
+    <p>{{message3}}</p>
+    <input ng-model="message3"> -->
+
+<!-- 
+    <ul>
+      <li ng-repeat="review in reviews"> {{review}} </li>
+    </ul>
+    <div>Add Review:
+    <input ng-model="newReview">
+    </div>
+    <button ng-click="addReview(newReview)">Submit</button> -->
